@@ -26,7 +26,7 @@ const About = () => {
     <div className="about" id="About">
       <div className="about__row">
         <div className="about__img">
-          <img src="/img/About.png" alt="" />
+          <img src="public/img/About.png" alt="" />
         </div>
         <div className="about__text">
           <h1>About Me</h1>
