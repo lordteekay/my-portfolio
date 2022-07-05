@@ -1,0 +1,109 @@
+.contact{
+    background-image: linear-gradient(to right, rgb(16, 11, 11),rgb(53, 49, 49),black);
+}
+.contact__form{
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contact__form>p{
+    width: 420px;
+    font-size: 0.9rem;
+}
+.contact__contents{
+    display: grid;
+    grid-template-areas: 
+    "I J";
+    justify-content: center;
+    padding: 30px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+span{
+    color: rgb(32, 183, 32);
+}
+.form>input{
+    width: 390px;
+    padding: 5px;
+    background-color: transparent;
+    color: grey;
+    border: 2px solid grey;
+}
+.form>input:focus{
+ outline: none !important;
+ border-color: rgb(32, 183, 32);
+ box-shadow: 0 0 10px rgb(32, 183, 32);
+}
+.form>textarea{
+    width: 390px;
+    color: grey;
+    background-color: transparent;
+
+}
+.form>textarea:focus{
+    outline: none !important;
+    border-color: rgb(32, 183, 32);
+    box-shadow: 0 0 10px rgb(32, 183, 32);
+      
+}
+.form>button{
+    width: 100px;
+    border: none;
+    background-color: rgb(32, 183, 32);
+    padding: 5px 10px;
+    color: white;
+}
+.contact__image>img{
+    height: 400px;
+    width: 400px;
+    box-shadow: -5px 5px rgb(32, 183, 32) inset;
+    padding: 5px;
+    margin-left: -30px;
+}
+@media (max-width:380px){
+    .contact{
+        width: 100%;
+        padding: 0;
+        padding: 20px;
+    }
+    .contact__contents{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact__form{
+        width: 20rem;
+        padding: 0;
+        font-size: 0.5rem;
+    }
+    .contact__form>p{
+        width: 20rem;
+    }
+    .form>input{
+        width: 20rem;
+    }
+    .form>textarea{
+        width: 20rem;
+    }
+    .contact__image{
+        width: 100%;
+        display: none;
+        
+    }
+    .contact__image>img{
+        width: 20rem;
+        height: 20rem;
+        position: relative;
+        left: 15%;
+    }
+
+}

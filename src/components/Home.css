@@ -1,0 +1,259 @@
+.home__bg {
+  background-image: url("/public/img/bg.jpg");
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(20, 20, 20,0.3);
+  z-index: 1000;
+  width: 100%;
+}
+.logo {
+  margin-right: auto;
+}
+.logo > img {
+  transition: all;
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+  height: 50px;
+}
+.logo > img:hover {
+  transform: rotate(-360deg);
+}
+.nav__bar > ul {
+  list-style: none;
+  display: flex;
+}
+.nav__bar > ul > li {
+  padding: 10px;
+  font-size: 1.1rem;
+  transition: all;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+}
+.nav__bar > ul > li > a {
+  color: #ffeb3b;
+  text-decoration: none;
+  text-shadow: 0 0 10px #ffeb3b, 0 0 40px #ffeb3b, 0 0 80px #ffeb3b,
+    0 0 160px #ffeb3b, 0 0 240px #ffeb3b;
+}
+li:hover {
+  transform: rotate(360deg);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 196, 0);
+  border-radius: 10px;
+}
+.main {
+  color: white;
+  padding: 125px 0;
+  position: relative;
+  top: 10%;
+}
+.intro {
+  margin-left: 5px;
+  position: relative;
+  /* background-color: rgba(5, 5, 5,0.9); */
+  background-image: linear-gradient(
+    90deg,
+    rgba(5, 5, 5, 1),
+    rgba(5, 5, 5, 0.6),
+    rgba(5, 5, 5, 0.3)
+  );
+  width: 50%;
+}
+.welcome_span {
+  color: rgba(143, 135, 135, 0.2);
+  opacity: 0.8;
+  position: relative;
+  top: -20%;
+}
+.welcome_span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid black;
+  background-image: linear-gradient(
+    90deg,
+    rgba(5, 5, 5, 0.9),
+    rgba(5, 5, 5, 0.9),
+    rgba(5, 5, 5, 0.3)
+  );
+
+  /* background-color: rgba(5, 5, 5,0.9); */
+  animation-name: welcome;
+  animation-duration: 3s;
+  animation-timing-function: steps(33);
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes welcome {
+  100% {
+    opacity: 1;
+    left: 110%;
+  }
+}
+
+.name {
+  position: relative;
+  animation-name: name;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes name {
+  0% {
+    left: -80%;
+  }
+  25% {
+    left: -60%;
+  }
+  50% {
+    left: -40%;
+  }
+  75% {
+    left: -20%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.occupation {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffeb3b;
+  animation-name: occupation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  left: -80%;
+  animation-fill-mode: forwards;
+}
+@keyframes occupation {
+  0% {
+    left: -80%;
+  }
+  25% {
+    left: -60%;
+  }
+  50% {
+    left: -40%;
+  }
+  75% {
+    left: -20%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.continent{
+  position: relative;
+  animation: continent;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-timing-function: linear;
+  left: -80%;
+  animation-fill-mode: forwards;
+}
+@keyframes continent{
+  0% {
+    left: -80%;
+  }
+  25% {
+    left: -60%;
+  }
+  50% {
+    left: -40%;
+  }
+  75% {
+    left: -20%;
+  }
+  100% {
+    left: 0;
+  }
+}
+.cancel{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.cancel>.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.small_nav__bar>ul{
+  position: relative;
+  top: 10%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.small_nav__bar>ul>li{
+  list-style: none;
+
+}
+.small_nav__bar>ul>li>a{
+  text-decoration: none;
+  color: white;
+}
+.menu{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  display: none;
+  margin-right: 5px;
+}
+.menu_click{
+  height: 25px;
+}
+@media (max-width:380px){
+  .home{
+      width: 100%;
+      overflow: hidden;
+
+  }
+  .home__bg{
+      width: 100%;
+      background-position: 50%;
+      background-size: cover;
+  }
+  .header{
+      width: 100%;
+  }
+  .nav__bar{
+    display: none;
+  }
+
+  .logo>img{
+    height: 30px;
+  }
+  .menu{
+    display: block;
+  }
+  .intro{
+    font-size: 0.5rem;
+  }
+}

@@ -1,0 +1,128 @@
+.project{
+    background-color: rgb(57, 52, 52);
+    text-align: center;
+    padding: 10px;
+}
+.project__heading{
+    margin-top: 30px;
+}
+.project__container{
+    display: grid;
+    grid-template-areas: 
+    "I J K"
+    "L M N";
+    gap: 15px;
+    padding: 40px 45px;
+    margin: 20px;
+}
+.project__box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.project__box>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+/* .project__box>img::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+} */
+.project__box>img:hover{
+    backdrop-filter: blur(10px);
+    filter: blur(4px);
+
+}
+.upper__layer{
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: 5%;
+    padding:0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.project__box>.first{
+    grid-area: I;
+}
+.project__box>.second{
+    grid-area: J;
+}
+.project__box>.third{
+    grid-area: K;
+}
+.project__box>.fourth{
+    grid-area: L;
+}
+.project__box>.fifth{
+    grid-area: M;
+}
+.project__box>.sixth{
+    grid-area: N;
+}
+.upper__layer>button{
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
+    padding:5px 15px;
+    color: white;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    cursor: pointer;
+ 
+}
+.upper__layer>button:hover{
+    background-color: black;
+    color: grey;
+    border: 1px solid grey;
+}
+.upper__layer>h2{
+    font-size: 1rem;
+}
+.project__more{
+    position: relative;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project__more>button{
+    background-color: rgb(208, 60, 85);
+    border: none;
+    border: 1px solid white;
+    padding:5px 15px;
+    color: white;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    cursor: pointer;
+
+}
+.project__more>button:hover{
+    background-color: white;
+    color: rgb(208, 60, 85);
+    border: 1px solid rgb(208, 60, 85);
+    box-shadow: 2px 2px 8px grey;
+    margin-top: -10px;
+}
+@media (max-width:380px){
+    .project{
+        width: 100%;
+        padding: 0;
+        padding-top: 20px;
+    }
+    .project__container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+}

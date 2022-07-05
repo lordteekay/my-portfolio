@@ -1,0 +1,146 @@
+.about{
+    background-image: linear-gradient(to right,rgb(0, 0, 0),rgb(28, 27, 27),black,rgb(43, 40, 40));
+    padding: 50px;
+}
+.about__row{
+    display: grid;
+    grid-template-areas: 
+    "I J";
+    grid-gap: 10px;
+    padding: 20px;
+    position: relative;
+}
+.about__img{
+    grid-area: I;
+    box-shadow: 4px 4px #ffeb3b inset;
+    padding: 0 5px;
+    position: relative;
+    animation-name: image;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    left: 100%;
+    animation-fill-mode: forwards;
+}
+.about__img:hover{
+    backdrop-filter: blur(10px);
+    filter: blur(4px);
+    transition: 0.5s ease;
+}
+@keyframes image{
+    0%{
+        left: 100%;
+    }
+    25%{
+        left: 75%;
+    }
+    50%{
+        left: 50%;
+    }
+    75%{
+        left: 25%;
+    }
+    100%{
+        left: 0;
+    }
+}
+.about__text{
+    grid-area: J;
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    text-align: justify;
+    color: grey;
+    transition-property: all;
+    transition-duration: 3s;
+    animation-name: text;
+    position: relative;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    right: 100%;
+    animation-fill-mode: forwards;
+
+}
+.about__text:hover{
+    color: white;
+}
+@keyframes text{
+    0%{
+        right: 100%;
+    }
+    25%{
+        right: 75%;
+    }
+    50%{
+        right: 50%;
+    }
+    75%{
+        right: 25%;
+    }
+    100%{
+        right: 0;
+    }
+}
+
+.button_btn>a{
+    text-decoration: none;
+}
+.button_btn>a>.btn{
+    background-color: #ffeb3b;
+    border: none;
+    padding:5px 15px;
+    color: rgb(133, 119, 12);
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    /* transition: all; */
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: 2s;
+}
+.button_btn>a>.btn:hover{
+    transform: rotateY(360deg);
+    background-color: white;
+    color: #ffeb3b;
+}
+.topBottom_btn{
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 30px;
+    position: fixed;
+    right: 1%;
+    bottom: 3%;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+@media (max-width:380px){
+    #About{
+        width: 100%;
+        position: relative;
+        padding: 0;
+    }
+    .about__row{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .about__img{
+        width: 20rem;
+        height: 20rem;
+    }
+    .about__img>img{
+        width: 100%;
+        height: 100%;
+    }
+    .about__text{
+        width: 20rem;
+    }
+
+}
